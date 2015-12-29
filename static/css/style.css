@@ -1,0 +1,66 @@
+body
+{
+	font-family: 'Nunito', sans-serif;
+	color: darkgray;
+	background: black repeat;
+	font-size: 15px;
+}
+.font-feature
+{
+	font-family: 'Roboto', sans-serif;
+	font-size: 2erm;
+	color: #000000 ;
+	font-weight: 100;
+}
+
+.margin-top-10{
+
+	margin-top: 10px;
+}
+.modal-footer {   border-top: 0px; }
+
+.font-feature
+{
+	font-family: 'Roboto', sans-serif;
+	font-size: 1erm;
+	color: #000000 ;
+	font-weight: 100;
+}
+.padding-top-10
+{
+	padding-top: 10px;
+}
+
+/* Carousel base class */
+.carousel {
+	position: relative;
+  width: 100%;
+
+}
+
+.carousel-caption {
+  z-index: 1;
+}
+
+
+.carousel .item {
+	padding-top: 10px;
+	width: 100%;
+  height: 450px;
+  background-color: black;
+}
+
+div.c-wrapper{
+	padding-top: 10px;
+	width: 100%; /* for example */
+	margin: auto;
+}
+
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img{
+	width: 100%;  /* use this, or not */
+	margin: auto;}
+
+
+
+
