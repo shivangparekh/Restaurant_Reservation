@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html ng-app="reservationApp">
+<head>
+    <title>welcome to Italy!</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" />
+    <link href='http://fonts.googleapis.com/css?family=Nunito' rel='stylesheet' type='text/css'>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="static/css/style.css">
+</head>
+
+<body>
+<div class="navbar wrapper" ng-controller="HomeCtrl">
+<div class="container">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                <span class="icon-bar" ></span>
+
+            </button>
+            <a class="navbar-brand " href="home.html">Italy Town!</a>
+        </div>
+        <div class="collapse navbar-collapse pull-right">
+            <ul class="nav navbar-nav">
+                <li class="active"><a href="#/home">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <li dropdown on-toggle="toggled(open)">
+                    <a href id="simple-dropdown" dropdown-toggle>
+                Reservations<span class="caret"></span>
+                </a>
+                <ul class="dropdown-menu" aria-labelledby="simple-dropdown">
+                    <li ng-repeat="choice in items">
+                        <a ng-click="changeView($index)">{{choice}}</a>
+                    </li>
+                </ul>
+                </li>
+                <li class="modal">
+                    <script type="text/ng-template" id="myModalContent.html">
+                        <div class="modal-header font-feature">
+                            <button type="button" ng-click="cancel()" aria-hidden="true">X</button>
+                            <h1 class="text-center">Admin Login</h1>
+                        </div>
+
+                        <form ng-submit="submit()">
+                            <form class="form col-md-12 center-block">
+
+                                <div class="form-group">
+                                    <input type="email" class="form-control input-lg" placeholder="Email">
+                                </div>
+                                <div class="form-group">
+                                    <input type="password" class="form-control input-lg" placeholder="Password">
+                                </div>
+
+                                <div class="form-group">
+                                    <div class="col-md-12 text-center font-feature">
+                                        <label><input  type="checkbox" value="" id="remember_me"> Keep me Signed  </label>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <button type="button" class="btn btn-link btn-block " id="forgot_password">Forgot Password?</button>
+                                    </div>
+                                </div>
+
+                                <div class="modal-footer">
+                                    <button class="btn btn-warning" ng-click="cancel()">Cancel</button>
+                                    <input type="submit" class="btn primary-btn" value="Submit" />
+                                </div>
+                             </form>
+                        </form>
+                    </script>
+
+                    <a  href="#"  ng-click="open()">Admin Login</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+<ng-view></ng-view>
+<script src="static/js/jquery.min.js"></script>
+<script src="static/js/bootstrap.min.js"></script>
+<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.4/angular.min.js"></script>
+<script src="https://code.angularjs.org/1.4.4/angular-route.js"></script>
+
+<script src="https://code.angularjs.org/1.4.4/angular-messages.js"></script>
+<script src="static/js/ui-bootstrap-tpls-0.13.3.min.js"></script>
+<script src="static/js/datetime-picker.min.js"></script>
+<script src="https://code.angularjs.org/1.4.4/angular-animate.min.js"></script>
+
+<script src="scripts/app.js"></script>
+<script src="scripts/controllers/homeCtrl.js"></script>
+<script src="scripts/controllers/createReservationCtrl.js"></script>
+<script src="scripts/controllers/manageReservationCtrl.js"></script>
+<script src="scripts/controllers/editReservationCtrl.js"></script>
+<script src="scripts/controllers/modalInstanceCtrl.js"></script>
+</body>
+
+</html>
